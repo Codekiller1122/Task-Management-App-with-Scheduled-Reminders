@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/img"
+    tools:context=".MainActivity">
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recyclerViewTasks"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:padding="16dp"
+        android:clipToPadding="false"
+        android:scrollbars="vertical"
+        android:layout_above="@+id/layoutInput" />
+
+    <RelativeLayout
+        android:id="@+id/layoutInput"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true">
+
+        <Button
+            android:id="@+id/btnAddTask"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="16dp"
+            android:text="Add Task"
+            android:background="?android:attr/selectableItemBackground"
+            android:textColor="@android:color/black"
+            android:backgroundTint="@color/colorPrimary"
+            android:textSize="18sp"
+            />
+
+        <EditText
+            android:id="@+id/editTextTaskName"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Task Name"
+            android:layout_below="@id/btnAddTask"
+            android:layout_marginTop="16dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginEnd="16dp"
+            />
+
+        <EditText
+            android:id="@+id/editTextPriority"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Priority"
+            android:layout_below="@id/editTextTaskName"
+            android:layout_marginTop="16dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginEnd="16dp"
+            />
+
+        <EditText
+            android:id="@+id/editTextDelay"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Delay (ms)"
+            android:layout_below="@id/editTextPriority"
+            android:layout_marginTop="16dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginEnd="16dp"
+            />
+    </RelativeLayout>
+
+</RelativeLayout>
